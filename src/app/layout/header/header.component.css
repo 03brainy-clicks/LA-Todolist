@@ -1,0 +1,10 @@
+.logo {
+  width: 50px;
+}
+
+.logo-back {
+  background-color: white;
+}
+.logo-back h4 {
+  color: rgb(7, 7, 59);
+}

@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="my-5 text-white">Todo List</h2>
+  <ul
+    *ngFor="let todo of todosList"
+    class="d-flex justify-content-between px-3 py-2 my-2 align-items-center"
+  >
+    <span
+      ><input
+        type="checkbox"
+        (click)="changeStatus(todo)"
+        [checked]="todo.isCompleted"
+    /></span>
+    <span [ngClass]="{ cross: todo.isCompleted }">{{
+      todo.title | uppercase
+    }}</span>
+    <span>{{ todo.date | date }}</span>
+    <span>
+      <button class="btn btn-danger" (click)="deleteTodo(todo)">Delete</button>
+    </span>
+  </ul>
+</div>
